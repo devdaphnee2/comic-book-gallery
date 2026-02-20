@@ -20,20 +20,16 @@ namespace ComicBookGallery.Models
             {
                 return SeriesTitle + "#" + IssueNumber;
             }
-
-            //series-title-issuesnumber.jpg
-
-            public string CoverImageFileName
-            {
-                 get
-                 {
-                    return SeriesTitle.Replace(" ", "-").ToLower() + "-" + IssueNumber +".jpg";
-                 }
-
         }
-    }
-            
 
+        public string CoverImageFileName
+        {
+            get 
+            {
+                return SeriesTitle.Replace(" ", "-").ToLower() + " - " + IssueNumber + ".jpg";
+            }
+        }
         
     }
 }
+            
