@@ -13,6 +13,7 @@ namespace ComicBookGallery.Data
         {
             var comicBook = new ComicBook()
             {
+                Id = 1
                 SeriesTitle = "The Amazing Spider-Man",
                 IssueNumber = 700,
                 DescriptionHtml = "<p>Final issue <Witness the final hours of Doctor Octopus life and his one, last, great act of revenge Even if Spider-Man survives...wstrongwill Peter Parker?</strong><p>",
@@ -25,12 +26,29 @@ namespace ComicBookGallery.Data
                     new Artist(){Name = "chris Eliopoulos", Role = "Letters"},
                 }
             },
+             new ComicBook()
+            {
+                 Id = 2,
+                SeriesTitle = "The Amazing Spider-Man",
+                IssueNumber = 657,
+                DescriptionHtml = "<p>FF: THREE TIE-IN .</strong>Spider-Man visits the FF for a very private<p>",
+                Artists = new Artist[]
+                {
+                    new Artist(){Name = "Dan Slott", Role = "Script"},
+                    new Artist(){Name = "Marcos Martin", Role = "Pencils"},
+                    new Artist(){Name = "Marcos Martin", Role = "Inks"},
+                    new Artist(){Name = "Muntsa Vicente", Role = "Colors"},
+                    new Artist(){Name = "Joe Caramagna", Role = "Letters"},
+                },
+                Favorite = false
+            }
             new ComicBook()
             {
+                Id = 3,
                 SeriesTitle = "Bone",
                 IssueNumber = 50,
-                DescriptionHtml = "<p>Final issue <Witness the final hours of Doctor Octopus life and his one, last, great act of revenge Even if Spider-Man survives...wstrongwill Peter Parker?</strong><p>",
-                Artists = new Artist[] 
+                DescriptionHtml = "<p><strong>The Dugeon & The Parapet, Part1.</strong>Thorn is discovered by Lord Tars<p>",
+                Artists = new Artist[]
                 {
                     new Artist(){Name = "Jeff Smith", Role = "Script"},
                     new Artist(){Name = "Jeff Smith", Role = "Pencils"},
@@ -40,7 +58,7 @@ namespace ComicBookGallery.Data
                 },
                 Favorite = false
             }
-        };
+        }
         public ComicBook GetComicBook(int id)
         {
             ComicBook comicBookToReturn = null;
